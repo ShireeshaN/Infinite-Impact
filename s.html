@@ -1,0 +1,237 @@
+<section class="vids-section">
+  <div class="vids-text" id="vidsText">
+    <h5 id="vidsFeatureTitle">Feature</h5>
+    <h2 id="vidsTitle">Feature 1 Title</h2>
+    <p id="vidsDesc">This is a description for Feature 1.</p>
+    <ul id="vidsList">
+      <li>Point 1</li>
+      <li>Point 2</li>
+      <li>Point 3</li>
+    </ul>
+  </div>
+
+  <div class="vids-image-container">
+    <img id="vidsImage"
+      src="https://images.unsplash.com/photo-1581091870633-7ccfa0f3c3b3?auto=format&fit=crop&w=1000&q=80"
+      alt="Feature Image" />
+  </div>
+
+  <div class="vids-controls">
+    <button id="vidsPrevBtn" class="vids-arrow">↑</button>
+    <div class="vids-counter">
+      <span id="vidsCurrentIndex">1</span>
+      <span>|</span>
+      <span id="vidsTotal">65</span>
+    </div>
+    <button id="vidsNextBtn" class="vids-arrow">↓</button>
+  </div>
+</section>
+
+<style>
+  .vids-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 60px;
+    background: #fff;
+    position: relative;
+  }
+
+  .vids-text {
+    width: 45%;
+  }
+
+  .vids-text h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .vids-text h5::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 1px;
+    background: #000;
+    margin-top: 8px;
+  }
+
+  .vids-text h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: 700;
+  }
+
+  .vids-text p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .vids-text ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  .vids-text ul li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .vids-image-container {
+    width: 45%;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .vids-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .vids-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .vids-arrow {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .vids-arrow:hover {
+    color: #ffcc00;
+  }
+
+  .vids-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+  }
+
+  /* Fade transition class */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .vids-section {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+
+    .vids-image-container {
+      width: 100%;
+      height: 300px;
+    }
+
+    .vids-text {
+      width: 100%;
+      text-align: left;
+    }
+
+    .vids-controls {
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .vids-counter {
+      flex-direction: row;
+      gap: 5px;
+    }
+  }
+</style>
+
+<script>
+  const slides = [
+    {
+      title: "Feature 1 Title",
+      desc: "This is the description for Feature 1.",
+      img: "https://images.unsplash.com/photo-1581091870633-7ccfa0f3c3b3?auto=format&fit=crop&w=1000&q=80",
+      points: ["Point 1", "Point 2", "Point 3"]
+    },
+    {
+      title: "Feature 2 Title",
+      desc: "Description for Feature 2 goes here.",
+      img: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=1000&q=80",
+      points: ["Detail 1", "Detail 2", "Detail 3"]
+    }
+    // Add all 65 features here
+  ];
+
+  let vidsCurrent = 0;
+  const total = slides.length;
+  const vidsTitle = document.getElementById("vidsTitle");
+  const vidsDesc = document.getElementById("vidsDesc");
+  const vidsImage = document.getElementById("vidsImage");
+  const vidsList = document.getElementById("vidsList");
+  const vidsCurrentIndex = document.getElementById("vidsCurrentIndex");
+  const vidsTotal = document.getElementById("vidsTotal");
+  const vidsPrevBtn = document.getElementById("vidsPrevBtn");
+  const vidsNextBtn = document.getElementById("vidsNextBtn");
+
+  vidsTotal.textContent = total;
+
+  function showVidsSlide(index) {
+    const slide = slides[index];
+    vidsImage.classList.add("fade-out");
+    vidsTitle.classList.add("fade-out");
+    vidsDesc.classList.add("fade-out");
+    vidsList.classList.add("fade-out");
+
+    setTimeout(() => {
+      vidsTitle.textContent = slide.title;
+      vidsDesc.textContent = slide.desc;
+      vidsImage.src = slide.img;
+
+      vidsList.innerHTML = slide.points.map(p => `<li>${p}</li>`).join("");
+
+      vidsCurrentIndex.textContent = index + 1;
+
+      vidsImage.classList.remove("fade-out");
+      vidsTitle.classList.remove("fade-out");
+      vidsDesc.classList.remove("fade-out");
+      vidsList.classList.remove("fade-out");
+    }, 500);
+  }
+
+  vidsPrevBtn.addEventListener("click", () => {
+    vidsCurrent = (vidsCurrent - 1 + total) % total;
+    showVidsSlide(vidsCurrent);
+  });
+
+  vidsNextBtn.addEventListener("click", () => {
+    vidsCurrent = (vidsCurrent + 1) % total;
+    showVidsSlide(vidsCurrent);
+  });
+
+  // autoplay every 3 seconds
+  setInterval(() => {
+    vidsCurrent = (vidsCurrent + 1) % total;
+    showVidsSlide(vidsCurrent);
+  }, 3000);
+</script>
