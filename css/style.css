@@ -174,7 +174,7 @@ a:focus {
 
 .nav-bar .navbar {
     height: 100%;
-    background: #030f27 !important;
+    background: #000000 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -504,12 +504,12 @@ a:focus {
 }
 
 .feature .col-md-12 {
-    background: #030f27;
+    background: #000000;
 }
     
 .feature .col-md-12:nth-child(2n) {
     color: #030f27;
-    background: #fdbe33;
+    background: #000000;
 }
 
 .feature .feature-item {
@@ -553,13 +553,13 @@ a:focus {
 }
 
 .feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #fdbe33;
+    background: #000000;
 }
 
 .feature .feature-icon [class^="flaticon-"]::before {
     position: relative;
     margin: 0;
-    color: #fdbe33;
+    color: #ffffff;
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
@@ -571,22 +571,22 @@ a:focus {
 
 .feature .feature-text h3 {
     margin: 0 0 10px 0;
-    color: #fdbe33;
-    font-size: 25px;
+    color: #ffffff;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .feature .feature-text p {
     margin: 0;
-    color: #fdbe33;
-    font-size: 18px;
+    color: #cfceca;
+    font-size: 14px;
     font-weight: 400;
 }
 
 .feature .col-md-12:nth-child(2n) [class^="flaticon-"]::before,
 .feature .col-md-12:nth-child(2n) h3,
 .feature .col-md-12:nth-child(2n) p {
-    color: #030f27;
+    color: #ffffff;
 }
 
 
