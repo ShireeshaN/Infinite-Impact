@@ -51,23 +51,23 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="#" class="nav-item nav-link">About</a>
                     
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
                         <div class="dropdown-menu">
-                            <a href="blog.html" class="dropdown-item">Water proofing</a>
-                            <a href="single.html" class="dropdown-item">Painting</a>
-                            <a href="blog.html" class="dropdown-item">Tiles</a>
-                            <a href="single.html" class="dropdown-item">Epoxy Flooring</a>
-                            <a href="blog.html" class="dropdown-item">Plumbing</a>
-                            <a href="single.html" class="dropdown-item">End to End Civil Work</a>
+                            <a href="#" class="dropdown-item">Water proofing</a>
+                            <a href="#" class="dropdown-item">Painting</a>
+                            <a href="#" class="dropdown-item">Tiles</a>
+                            <a href="#" class="dropdown-item">Epoxy Flooring</a>
+                            <a href="#" class="dropdown-item">Plumbing</a>
+                            <a href="#" class="dropdown-item">End to End Civil Work</a>
                         </div>
                     </div>
 
-                    <a href="team.html" class="nav-item nav-link">Team</a>
-                    <a href="portfolio.html" class="nav-item nav-link">Project</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="#" class="nav-item nav-link">Team</a>
+                    <a href="#" class="nav-item nav-link">Project</a>
+                    <a href="#" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -94,7 +94,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">We Are Professional</p>
                             <h1 class="animated fadeInLeft">Waterproofing</h1>
-                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                            <a class="btn animated fadeInUp" href="#">Get A Quote</a>
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">We Are Professional</p>
                             <h1 class="animated fadeInLeft">Painting</h1>
-                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                            <a class="btn animated fadeInUp" href="#">Get A Quote</a>
                         </div>
                     </div>
 
@@ -112,7 +112,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">We Are Professional</p>
                             <h1 class="animated fadeInLeft">Tiles</h1>
-                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                            <a class="btn animated fadeInUp" href="#">Get A Quote</a>
                         </div>
                     </div>
                      <div class="carousel-item">
@@ -120,7 +120,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">We Are Professional</p>
                             <h1 class="animated fadeInLeft">Epoxy Flooring</h1>
-                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                            <a class="btn animated fadeInUp" href="#">Get A Quote</a>
                         </div>
                     </div>
                      <div class="carousel-item">
@@ -128,7 +128,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">We Are Professional</p>
                             <h1 class="animated fadeInLeft">Plumbing</h1>
-                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                            <a class="btn animated fadeInUp" href="#">Get A Quote</a>
                         </div>
                     </div>
                      <div class="carousel-item">
@@ -136,7 +136,7 @@
                         <div class="carousel-caption">
                             <p class="animated fadeInRight">We Are Professional</p>
                             <h1 class="animated fadeInLeft">End to End Civil Services</h1>
-                            <a class="btn animated fadeInUp" href="contact.html">Get A Quote</a>
+                            <a class="btn animated fadeInUp" href="#">Get A Quote</a>
                         </div>
                     </div>
                 </div>
@@ -281,6 +281,75 @@
                 </div>
             </div>
             <!-- Fact End -->
+<!-- waterprrof anim start -->
+<!-- Waterproofing Tagline Section -->
+<div class="waterproofs">
+    <div class="tagline-box">
+        <h2 class="animate-text">Leak-Proof Solutions That Last a Lifetime</h2>
+    </div>
+</div>
+
+<style>
+.waterproofs {
+    position: relative;
+    height: 600px;
+    background: url('img/waterproofanim.png') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Right side text */
+    padding-right: 80px;
+    overflow: hidden;
+}
+
+/* Subtle dark overlay (optional for text visibility) */
+.waterproofs::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25); /* keep image visible */
+}
+
+/* Glossy box without blur */
+.tagline-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    padding: 25px 40px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Tagline Text */
+.tagline-box h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: right;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+/* Fade-in + slide animation */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-text {
+    animation: slideInRight 1.3s ease-out forwards;
+}
+</style>
+
+
+<!-- waterproof anim end -->
 
 
             <!-- Service Start -->
@@ -297,93 +366,87 @@
                                     <img src="img/services/ser (1).png" alt="Image">
                                     <div class="service-overlay">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
+                                           Reliable waterproofing solutions that protect structures from leaks and moisture damage, ensuring long-term durability.  </p>
                                     </div>
                                 </div>
                                 <div class="service-text">
-                                    <h3>Building Construction</h3>
-                                    <a class="btn" href="img/services/ser (2).png" data-lightbox="service">+</a>
+                                    <h3>Waterproofing </h3>
+                                    <a class="btn" href="" data-lightbox="service">+</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                             <div class="service-item">
                                 <div class="service-img">
-                                    <img src="img/services/ser (3).png" alt="Image">
+                                    <img src="img/services/ser (2).png" alt="Image">
                                     <div class="service-overlay">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
+                                       Professional interior and exterior painting services delivering high-quality finishes for commercial and industrial spaces.      </p>
                                     </div>
                                 </div>
                                 <div class="service-text">
-                                    <h3>House Renovation</h3>
-                                    <a class="btn" href="img/services/ser (4).png" data-lightbox="service">+</a>
+                                    <h3>Painting</h3>
+                                    <a class="btn" href="" data-lightbox="service">+</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="service-item">
                                 <div class="service-img">
-                                    <img src="img/service-3.jpg" alt="Image">
+                                    <img src="img/services/ser (3).png" alt="Image">
                                     <div class="service-overlay">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
+                                         Expert tile installation with precision and aesthetics, enhancing the look and functionality of your surfaces.     </p>
                                     </div>
                                 </div>
                                 <div class="service-text">
-                                    <h3>Architecture Design</h3>
-                                    <a class="btn" href="img/services/ser (4).png" data-lightbox="service">+</a>
+                                    <h3>Tiles Work</h3>
+                                    <a class="btn" href="" data-lightbox="service">+</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                             <div class="service-item">
                                 <div class="service-img">
-                                    <img src="img/services/ser (5).png" alt="Image">
+                                    <img src="img/services/ser9.png" alt="Image">
                                     <div class="service-overlay">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
+                                        Durable and seamless epoxy flooring systems ideal for industrial, commercial, and high-traffic environments.       </p>
                                     </div>
                                 </div>
                                 <div class="service-text">
-                                    <h3>Interior Design</h3>
-                                    <a class="btn" href="img/services/ser (6).png" data-lightbox="service">+</a>
+                                    <h3>Epoxy Flooring </h3>
+                                    <a class="btn" href="" data-lightbox="service">+</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="service-item">
                                 <div class="service-img">
-                                    <img src="img/service-5.jpg" alt="Image">
+                                    <img src="img/services/ser (5).png" alt="Image">
                                     <div class="service-overlay">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
+                                           Comprehensive plumbing services offering efficient installations, repairs, and maintenance for all project scales.   </p>
                                     </div>
                                 </div>
                                 <div class="service-text">
-                                    <h3>Fixing & Support</h3>
-                                    <a class="btn" href="img/service-5.jpg" data-lightbox="service">+</a>
+                                    <h3>Plumbing </h3>
+                                    <a class="btn" href="" data-lightbox="service">+</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                             <div class="service-item">
                                 <div class="service-img">
-                                    <img src="img/service-6.jpg" alt="Image">
+                                    <img src="img/services/ser (4).png" alt="Image">
                                     <div class="service-overlay">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                        </p>
+                                          Complete civil construction solutions from foundation to finishing, managed with quality and efficiency.     </p>
                                     </div>
                                 </div>
                                 <div class="service-text">
-                                    <h3>Painting</h3>
-                                    <a class="btn" href="img/service-6.jpg" data-lightbox="service">+</a>
+                                    <h3>End to End Civil Work </h3>
+                                    <a class="btn" href="" data-lightbox="service">+</a>
                                 </div>
                             </div>
                         </div>
@@ -393,30 +456,94 @@
             <!-- Service End -->
 
 
+
+
+
+
+
+
             <!-- Video Start -->
-            <div class="video wow fadeIn" data-wow-delay="0.1s">
-                <div class="container">
-                    <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>        
-                            <!-- 16:9 aspect ratio -->
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Tagline Section Start -->
+<!-- Tagline Section Start -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+.hero-section {
+    position: relative;
+    background: url('img/services/ser (1).png') center center / cover no-repeat fixed; /* Parallax effect */
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+/* Tagline text styling */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* Optional smooth fade-in effect */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section h1,
+.hero-section p {
+    animation: fadeUp 1.2s ease-out forwards;
+}
+
+.hero-section h1 {
+    animation-delay: 0.3s;
+}
+
+.hero-section p {
+    animation-delay: 0.8s;
+}
+</style>
+
+<div class="hero-section">
+    <div class="container">
+        <h2 class="text-white">Building Strength, Layer by Layer</h2>
+        <p>From waterproofing to complete civil solutions — quality and trust in every service we deliver.</p>
+    </div>
+</div>
+<!-- Tagline Section End -->
+
+<!-- Tagline Section End -->
+
             <!-- Video End -->
 
 
@@ -425,58 +552,58 @@
                 <div class="container">
                     <div class="section-header text-center">
                         <p>Our Team</p>
-                        <h2>Meet Our Engineer</h2>
+                        <h2>Meet Our Team</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="team-item">
                                 <div class="team-img">
-                                    <img src="img/team-1.jpg" alt="Team Image">
+                                    <img src="img/team-4.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Adam Phillips</h2>
+                                    <h2>Jay</h2>
                                     <p>CEO & Founder</p>
                                 </div>
-                                <div class="team-social">
+                                <!-- <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                             <div class="team-item">
                                 <div class="team-img">
-                                    <img src="img/team-2.jpg" alt="Team Image">
+                                    <img src="img/team-4.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Dylan Adams</h2>
+                                    <h2>Jay</h2>
                                     <p>Civil Engineer</p>
                                 </div>
-                                <div class="team-social">
+                                <!-- <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="team-item">
                                 <div class="team-img">
-                                    <img src="img/team-3.jpg" alt="Team Image">
+                                    <img src="img/team-4.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Jhon Doe</h2>
+                                    <h2>Jay</h2>
                                     <p>Interior Designer</p>
                                 </div>
-                                <div class="team-social">
+                                <!-- <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -485,15 +612,15 @@
                                     <img src="img/team-4.jpg" alt="Team Image">
                                 </div>
                                 <div class="team-text">
-                                    <h2>Josh Dunn</h2>
+                                    <h2>Jay</h2>
                                     <p>Painter</p>
                                 </div>
-                                <div class="team-social">
+                                <!-- <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
                                     <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
                                     <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -515,61 +642,56 @@
                                 <div class="card wow fadeInLeft" data-wow-delay="0.1s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
-                                            Lorem ipsum dolor sit amet?
+                                           What waterproofing services do you offer?
                                         </a>
                                     </div>
                                     <div id="collapseOne" class="collapse" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                           We provide terrace, roof, and bathroom waterproofing using high-quality materials.    </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInLeft" data-wow-delay="0.2s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
-                                            Lorem ipsum dolor sit amet?
+                                           Do you handle commercial projects?
                                         </a>
                                     </div>
                                     <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                          Yes, we work with builders, contractors, and industries on all scales.   </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInLeft" data-wow-delay="0.3s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
-                                            Lorem ipsum dolor sit amet?
+                                            What’s special about your epoxy flooring?
                                         </a>
                                     </div>
                                     <div id="collapseThree" class="collapse" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                          Our epoxy floors are durable, chemical-resistant, and easy to maintain.  </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInLeft" data-wow-delay="0.4s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
-                                            Lorem ipsum dolor sit amet?
+                                            Do you take complete civil construction work?
                                         </a>
                                     </div>
                                     <div id="collapseFour" class="collapse" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                          Yes, we manage projects from foundation to finishing.  </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInLeft" data-wow-delay="0.5s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
-                                            Lorem ipsum dolor sit amet?
+                                           What kind of paints do you use?
                                         </a>
                                     </div>
                                     <div id="collapseFive" class="collapse" data-parent="#accordion-1">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                         We use premium-grade paints that ensure lasting color and finish.       </div>
                                     </div>
                                 </div>
                             </div>
@@ -579,61 +701,56 @@
                                 <div class="card wow fadeInRight" data-wow-delay="0.1s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
-                                            Lorem ipsum dolor sit amet?
+                                          Can you do customized tile work?
                                         </a>
                                     </div>
                                     <div id="collapseSix" class="collapse" data-parent="#accordion-2">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                      Yes, we install all types of tiles with perfect alignment and finish.        </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInRight" data-wow-delay="0.2s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
-                                            Lorem ipsum dolor sit amet?
+                                         Do you provide plumbing services for new buildings?
                                         </a>
                                     </div>
                                     <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                    Yes, we handle all plumbing installations and repairs.         </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInRight" data-wow-delay="0.3s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
-                                            Lorem ipsum dolor sit amet?
+                                         How do you ensure project quality?
                                         </a>
                                     </div>
                                     <div id="collapseEight" class="collapse" data-parent="#accordion-2">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                           Our expert team follows strict quality checks at every stage.   </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInRight" data-wow-delay="0.4s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
-                                            Lorem ipsum dolor sit amet?
+                                           How long do your waterproofing solutions last?
                                         </a>
                                     </div>
                                     <div id="collapseNine" class="collapse" data-parent="#accordion-2">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                           Depending on the area and product, 8–12 years on average.    </div>
                                     </div>
                                 </div>
                                 <div class="card wow fadeInRight" data-wow-delay="0.5s">
                                     <div class="card-header">
                                         <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen">
-                                            Lorem ipsum dolor sit amet?
+                                           How can I get a quote?
                                         </a>
                                     </div>
                                     <div id="collapseTen" class="collapse" data-parent="#accordion-2">
                                         <div class="card-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
-                                        </div>
+                                           Just contact us — we’ll schedule a quick site visit and share a quote.   </div>
                                     </div>
                                 </div>
                             </div>
@@ -650,7 +767,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="testimonial-slider-nav">
-                                <div class="slider-nav"><img src="img/testimonial-1.jpg" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="img/user.jpg" alt="Testimonial"></div>
                                 <div class="slider-nav"><img src="img/testimonial-2.jpg" alt="Testimonial"></div>
                                 <div class="slider-nav"><img src="img/testimonial-3.jpg" alt="Testimonial"></div>
                                 <div class="slider-nav"><img src="img/testimonial-4.jpg" alt="Testimonial"></div>
@@ -661,206 +778,166 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="testimonial-slider">
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                                <div class="slider-item">
-                                    <h3>Customer Name</h3>
-                                    <h4>profession</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   <div class="row">
+    <div class="col-12">
+        <div class="testimonial-slider">
+
+            <div class="slider-item">
+                <h3>Rajesh Kumar</h3>
+                <h4>Project Manager, Skyline Constructions</h4>
+                <p>Their waterproofing and epoxy flooring solutions are top-notch. Our site was completed on time and the quality exceeded expectations.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Anita Verma</h3>
+                <h4>Facility Head, TechPark Pvt. Ltd.</h4>
+                <p>We’ve partnered with them for multiple projects. Their painting and civil work team is highly professional and detail-oriented.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Mohammed Irfan</h3>
+                <h4>Site Engineer, BuildSmart Developers</h4>
+                <p>Excellent execution and timely completion! Their tile and plumbing work gave our project a perfect finish.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Deepak Sharma</h3>
+                <h4>Operations Head, RealEdge Infra</h4>
+                <p>They handled end-to-end civil work for our warehouse project. The workmanship and quality control were outstanding.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Pooja Nair</h3>
+                <h4>Architect, UrbanDesign Studio</h4>
+                <p>From waterproofing to painting, every service was done with precision. A reliable partner for any construction requirement.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Rahul Mehta</h3>
+                <h4>Contractor, BlueStone Projects</h4>
+                <p>Their epoxy flooring is durable and perfectly finished. The team maintained great coordination throughout the project.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Swati Deshmukh</h3>
+                <h4>Interior Designer</h4>
+                <p>I was impressed by their attention to detail in tile and painting work. The final outcome looked premium and professional.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Vivek Tiwari</h3>
+                <h4>Maintenance Manager, Nova Industries</h4>
+                <p>They completed waterproofing for our industrial unit efficiently. Zero leakage issues even after heavy rains.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Sandeep Reddy</h3>
+                <h4>Construction Consultant</h4>
+                <p>Dependable team with great communication. Their civil and finishing work helped us meet our project deadlines.</p>
+            </div>
+
+            <div class="slider-item">
+                <h3>Priya Joshi</h3>
+                <h4>Property Owner</h4>
+                <p>Professional, punctual, and quality-focused. Their waterproofing and tiling work transformed our building completely.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
                 </div>
             </div>
             <!-- Testimonial End -->
 
 
-            <!-- Blog Start -->
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Latest Blog</p>
-                        <h2>Latest From Our Blog</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-1.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-2.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="img/blog-3.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Lorem ipsum dolor sit</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog End -->
+       
 
 
             <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Office Contact</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info@example.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Building Construction</a>
-                                <a href="">House Renovation</a>
-                                <a href="">Architecture Design</a>
-                                <a href="">Interior Design</a>
-                                <a href="">Painting</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="newsletter">
-                                <h2>Newsletter</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu
-                                </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <!-- Office Contact -->
+            <div class="col-md-6 col-lg-3">
+                <h2>Office Contact</h2>
+                <p><i class="fa fa-map-marker-alt"></i> Regd. Office: H. No. 3-344/9, Plot No. 377 & 378, Tirumala Hills Colony, Road No. 10, Meerpet, Hyderabad – 500 097, T.S</p>
+                <p><i class="fa fa-map-marker-alt"></i> Admin Office: H. No. 2-1-305, Road No. 7C, Mamatha Nagar Colony, Nagole, Hyderabad – 500 068, Telangana</p>
+                <p><i class="fa fa-phone-alt"></i> +91 91352 52456</p>
+                <p><i class="fa fa-envelope"></i> infiniteimpact2024@gmail.com</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
+            </div>
+
+            <!-- Services -->
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Our Services</h2>
+                    <a href="#">Waterproofing</a>
+                    <a href="#">Painting</a>
+                    <a href="#">Tiles Work</a>
+                    <a href="#">Epoxy Flooring</a>
+                    <a href="#">Plumbing</a>
+                    <a href="#">End-to-End Civil Work</a>
                 </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-                        </div>
-						
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        <div class="col-md-6">
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Links</h2>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>Stay updated with our latest construction projects and service offerings.</p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Footer Menu -->
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Help</a>
+            <a href="#">FAQs</a>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container copyright">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; <a href="#">Infinite Impact Private Limited</a>, All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <p>Designed by <strong>Infinite Impact Private Limited</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
             <!-- Footer End -->
 
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
