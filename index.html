@@ -12,6 +12,13 @@
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -36,43 +43,75 @@
             <!-- Nav Bar Start -->
            <!-- Nav Bar Start -->
 <div class="nav-bar">
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <!-- Logo -->
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
-                <img src="img/logos.png" alt="Logo" style="height:60px; width:auto; margin-right:10px;">
-             
-            </a>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="img/logos.png" alt="Logo" style="height:60px; width:auto; margin-right:10px;">
+      </a>
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <!-- Toggle for mobile -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav mr-auto">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">About</a>
-                    
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Water proofing</a>
-                            <a href="#" class="dropdown-item">Painting</a>
-                            <a href="#" class="dropdown-item">Tiles</a>
-                            <a href="#" class="dropdown-item">Epoxy Flooring</a>
-                            <a href="#" class="dropdown-item">Plumbing</a>
-                            <a href="#" class="dropdown-item">End to End Civil Work</a>
-                        </div>
-                    </div>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav mr-auto">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="#" class="nav-item nav-link">About</a>
 
-                    <a href="#" class="nav-item nav-link">Team</a>
-                    <a href="#" class="nav-item nav-link">Project</a>
-                    <a href="#" class="nav-item nav-link">Contact</a>
+          <!-- ✅ Services Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Architectural Design</a>
+              <a href="#" class="dropdown-item">Construction & Civil</a>
+
+              <!-- Submenu -->
+              <div class="dropdown-submenu">
+                <a href="#" class="dropdown-item dropdown-toggle">
+                  Interiors & Finishes <i class="fa fa-chevron-right submenu-icon"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">Waterproofing</a>
+                  <a href="#" class="dropdown-item">Flooring Solutions</a>
+                  <a href="#" class="dropdown-item">Painting</a>
+                  <a href="#" class="dropdown-item">Tiles Work</a>
+                  <a href="#" class="dropdown-item">Plumbing</a>
+                  <a href="#" class="dropdown-item">Carpentry</a>
                 </div>
+              </div>
             </div>
-        </nav>
-    </div>
+          </div>
+          <!-- ✅ End of Services -->
+
+          <a href="#" class="nav-item nav-link">Team</a>
+          <a href="#" class="nav-item nav-link">Projects</a>
+          <a href="#" class="nav-item nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
 </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile submenu toggle
+    const submenuLinks = document.querySelectorAll('.dropdown-submenu > a');
+    submenuLinks.forEach(el => {
+      el.addEventListener('click', function(e) {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle('open');
+        }
+      });
+    });
+  });
+</script>
+
+
 <!-- Nav Bar End -->
 
             <!-- Nav Bar End -->
@@ -282,82 +321,504 @@
             </div>
             <!-- Fact End -->
 <!-- waterprrof anim start -->
-<!-- Waterproofing Tagline Section -->
-<div class="waterproofs">
-    <div class="tagline-box">
-        <h2 class="animate-text">Leak-Proof Solutions That Last a Lifetime</h2>
+
+
+<!-- Architectural Design start -->
+<!-- ===== ARCHITECTURAL DESIGN SECTION ===== -->
+<section class="architecture-section py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Architectural Design</h2>
+      <p class="section-subtitle">
+        We provide innovative and comprehensive design solutions tailored to your vision and functionality.
+      </p>
     </div>
-</div>
+
+    <div class="row g-4 align-items-center">
+      <!-- Left Side - Text Content -->
+      <div class="col-lg-6">
+        <div class="architecture-content">
+          <h3 class="mb-3">Our Design Solutions Include:</h3>
+          <ul class="design-list">
+            <li><i class="fa-solid fa-drafting-compass"></i> Conceptual & Detailed Design</li>
+            <li><i class="fa-solid fa-ruler-combined"></i> Space Planning</li>
+            <li><i class="fa-solid fa-cube"></i> 3D Modeling & Visualization</li>
+            <li><i class="fa-solid fa-diagram-project"></i> Structural Drawings</li>
+          </ul>
+          <p class="mt-4">
+            From concept to construction, our expert team ensures every design blends creativity, sustainability, and practicality.
+          </p>
+          <a href="#" class="btn btn-primary mt-3">Get Consultation</a>
+        </div>
+      </div>
+
+      <!-- Right Side - Image -->
+      <div class="col-lg-6 text-center">
+        <div class="architecture-image">
+          <img src="img/indexpageimgs/archiimgs.png" alt="Architectural Design" class="img-fluid rounded shadow-lg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style>
-.waterproofs {
-    position: relative;
-    height: 600px;
-    background: url('img/waterproofanim.png') center center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Right side text */
-    padding-right: 80px;
-    overflow: hidden;
+    /* ===== ARCHITECTURAL DESIGN SECTION ===== */
+.architecture-section {
+  background: #f8f9fa;
+  padding: 80px 0;
 }
 
-/* Subtle dark overlay (optional for text visibility) */
-.waterproofs::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25); /* keep image visible */
+.section-header .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Glossy box without blur */
-.tagline-box {
-    position: relative;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 15px;
-    padding: 25px 40px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+.section-header .section-subtitle {
+  color: #555;
+  max-width: 650px;
+  margin: 10px auto 0;
+  font-size: 16px;
 }
 
-/* Tagline Text */
-.tagline-box h2 {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-align: right;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    margin: 0;
+.architecture-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
 }
 
-/* Fade-in + slide animation */
-@keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(60px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.design-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
 
-.animate-text {
-    animation: slideInRight 1.3s ease-out forwards;
+.design-list li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  transition: 0.3s;
+}
+
+.design-list li i {
+  color: #fdbe33;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.design-list li:hover {
+  color: #000;
+  transform: translateX(5px);
+}
+
+.architecture-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.architecture-content .btn-primary {
+  background: #fdbe33;
+  color: #000;
+  border: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.architecture-content .btn-primary:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Image Styling */
+.architecture-image img {
+  border-radius: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.architecture-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .architecture-section {
+    padding: 50px 20px;
+  }
+
+  .architecture-content {
+    text-align: center;
+  }
+
+  .architecture-content .btn {
+    margin-top: 15px;
+  }
+
+  .architecture-image {
+    margin-top: 30px;
+  }
+}
+
+</style>
+<!-- Architectural Design end -->
+
+
+
+<!--  Civil Structures & Consulting start -->
+<!-- ===== CIVIL STRUCTURES & CONSULTING SECTION ===== -->
+<section class="civil-section py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title text-white">Civil Structures & Consulting</h2>
+      <p class="section-subtitle text-light">
+        We offer expert structural and consulting solutions ensuring strength, stability, and precision in every build.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="civil-card">
+          <div class="civil-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h4>Structural Analysis & Design</h4>
+          <p>
+            Advanced structural planning using cutting-edge tools to ensure safety and longevity of your structures.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="civil-card">
+          <div class="civil-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h4>Project Feasibility Studies</h4>
+          <p>
+            Comprehensive evaluation of cost, risk, and technical feasibility to ensure successful project delivery.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="civil-card">
+          <div class="civil-icon">
+            <i class="fa-solid fa-helmet-safety"></i>
+          </div>
+          <h4>Construction Consulting</h4>
+          <p>
+            Professional advisory services providing guidance on material selection, quality control, and compliance.
+          </p>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+<style>/* ===== CIVIL STRUCTURES & CONSULTING SECTION ===== */
+.civil-section {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.civil-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(253, 190, 51, 0.1);
+  border-radius: 50%;
+}
+
+.section-header .text-white {
+  color: #fff;
+}
+
+.civil-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.civil-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(253, 190, 51, 0.15);
+  transition: left 0.4s ease;
+}
+
+.civil-card:hover::before {
+  left: 0;
+}
+
+.civil-icon {
+  font-size: 40px;
+  color: #fdbe33;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.civil-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fdbe33;
+}
+
+.civil-card p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.civil-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.civil-card:hover .civil-icon {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .civil-section {
+    padding: 60px 20px;
+  }
+
+  .civil-card {
+    margin-bottom: 25px;
+  }
+
+  .civil-icon {
+    font-size: 35px;
+  }
 }
 </style>
 
 
-<!-- waterproof anim end -->
+
+<!--  Civil Structures & Consulting end -->
+
+
+
+
+
+<!-- Construction start -->
+<!-- ===== CONSTRUCTION SECTION ===== -->
+<section class="construction-section">
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-center">
+      
+      <!-- Image Side -->
+      <div class="col-lg-6 construction-image"></div>
+      
+      <!-- Content Side -->
+      <div class="col-lg-6 construction-content py-5 px-4 px-md-5">
+        <div class="section-header mb-4">
+          <h2 class="section-title">Construction</h2>
+          <p class="section-subtitle">
+            We specialize in high-quality residential and community development projects that combine design precision with structural integrity.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-12">
+            <div class="construction-card">
+              <i class="fa-solid fa-city"></i>
+              <div>
+                <h4>Apartment Construction</h4>
+                <p>Comprehensive apartment construction services, from foundation to finishing — built for quality and comfort.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-12">
+            <div class="construction-card">
+              <i class="fa-solid fa-house-chimney"></i>
+              <div>
+                <h4>Villa Construction</h4>
+                <p>Premium villa construction with luxury detailing, modern design, and sustainable material use.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-12">
+            <div class="construction-card">
+              <i class="fa-solid fa-people-roof"></i>
+              <div>
+                <h4>Semi-Gated Community Development</h4>
+                <p>We plan and construct community living spaces ensuring privacy, accessibility, and modern infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>/* ===== CONSTRUCTION SECTION ===== */
+.construction-section {
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.construction-image {
+  background: url('img/indexpageimgs/constr.png')
+    center/cover no-repeat;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+}
+
+.construction-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.construction-content {
+  background: #fff;
+  color: #333;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #fdbe33;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+.construction-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 4px solid #fdbe33;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.construction-card i {
+  font-size: 36px;
+  color: #fdbe33;
+  transition: 0.3s;
+}
+
+.construction-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.construction-card p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.construction-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.construction-card:hover i {
+  color: #000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+  .construction-section .row {
+    flex-direction: column;
+  }
+
+  .construction-image {
+    min-height: 300px;
+  }
+
+  .construction-content {
+    padding: 40px 20px;
+  }
+
+  .construction-card {
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .construction-card i {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+</style>
+<!-- Construction end -->
+
 
 
             <!-- Service Start -->
             <div class="service">
                 <div class="container">
                     <div class="section-header text-center">
-                        <p>Our Services</p>
-                        <h2>We Provide Services</h2>
+                
+                        <h2>Building Interior Works</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -458,6 +919,239 @@
 
 
 
+            <!-- Waterproofing Tagline Section -->
+<div class="waterproofs">
+    <div class="tagline-box">
+        <h2 class="animate-text">Leak-Proof Solutions That Last a Lifetime</h2>
+    </div>
+</div>
+
+<style>
+.waterproofs {
+    position: relative;
+    height: 600px;
+    background: url('img/waterproofanim.png') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Right side text */
+    padding-right: 80px;
+    overflow: hidden;
+}
+
+/* Subtle dark overlay (optional for text visibility) */
+.waterproofs::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25); /* keep image visible */
+}
+
+/* Glossy box without blur */
+.tagline-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    padding: 25px 40px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Tagline Text */
+.tagline-box h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: right;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+/* Fade-in + slide animation */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-text {
+    animation: slideInRight 1.3s ease-out forwards;
+}
+</style>
+<!-- waterproof anim end -->
+
+
+<!-- painting start -->
+<!-- ===== PAINTING WORKS SECTION ===== -->
+<section class="painting-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Painting Works</h2>
+      <p class="section-subtitle">
+        Transform your spaces with our professional painting solutions — precision, creativity, and vibrant finishes.
+      </p>
+    </div>
+
+    <div class="painting-grid">
+      <!-- Card 1 -->
+      <div class="painting-card" style="--bg-color: #ff8c00;">
+        <i class="fa-solid fa-brush"></i>
+        <h4>Interior Painting</h4>
+        <p>Elegant color themes for living, bedroom, and interior spaces using high-quality finishes.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="painting-card" style="--bg-color: #3498db;">
+        <i class="fa-solid fa-paint-roller"></i>
+        <h4>Exterior Painting</h4>
+        <p>Weather-resistant coatings ensuring long-lasting beauty and protection for your exteriors.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="painting-card" style="--bg-color: #2ecc71;">
+        <i class="fa-solid fa-spray-can"></i>
+        <h4>Texture & Designer Finishes</h4>
+        <p>Unique textures and designer finishes that add character and style to your walls.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="painting-card" style="--bg-color: #e74c3c;">
+        <i class="fa-solid fa-palette"></i>
+        <h4>Wood & Metal Painting</h4>
+        <p>Protective coatings and rich finishes for woodwork, metal structures, and decorative frames.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="painting-card" style="--bg-color: #9b59b6;">
+        <i class="fa-solid fa-fill-drip"></i>
+        <h4>Industrial Coatings</h4>
+        <p>Durable and efficient painting systems for factories, warehouses, and commercial projects.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="painting-card" style="--bg-color: #f1c40f;">
+        <i class="fa-solid fa-brush"></i>
+        <h4>Re-Painting & Maintenance</h4>
+        <p>Expert re-coating and maintenance services that restore beauty and extend surface life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>/* ===== PAINTING WORKS SECTION ===== */
+.painting-section {
+  background: #fffaf3;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.painting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.painting-card {
+  background: var(--bg-color);
+  color: #fff;
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.painting-card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.painting-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.painting-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f8f8f8;
+}
+
+.painting-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.painting-card:hover::after {
+  transform: translateY(0);
+}
+
+.painting-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.painting-card:hover i {
+  transform: scale(1.2);
+}
+
+/* Animation on Scroll */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .painting-card {
+    padding: 25px 20px;
+  }
+
+  .painting-card i {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+</style>
+<!-- painting start -->
 
 
 
