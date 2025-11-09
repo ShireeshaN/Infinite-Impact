@@ -1,0 +1,148 @@
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: "Poppins", sans-serif; background: #f5f5f5; overflow-x: hidden; }
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* full screen initially */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .hero-image.shrink {
+    animation: moveLeft 2s ease forwards;
+  }
+
+  @keyframes moveLeft {
+    0% { width: 100%; }
+    100% { width: 45%; }
+  }
+
+  .hero-content {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    padding: 5rem 3rem;
+    opacity: 0;
+    transform: translateX(40px);
+    z-index: 2;
+  }
+
+  .hero-content.active {
+    animation: textIn 1.2s ease forwards;
+  }
+
+  @keyframes textIn {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  .hero-content h2 { font-weight: 700; font-size: 2rem; line-height: 1.4; color: #222; letter-spacing: 1px; margin-bottom: 1.2rem; text-transform: uppercase; }
+  .hero-content p { color: #666; font-size: 15px; line-height: 1.8; margin-bottom: 2rem; }
+  .btn-custom { background-color: #444; color: #fff; padding: 10px 24px; border-radius: 0; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; transition: 0.3s; }
+  .btn-custom:hover { background-color: #000; }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    user-select: none;
+  }
+
+  @media (max-width: 992px) {
+    .hero-section { flex-direction: column; height: auto; }
+    .hero-image { width: 45%; height: 30vh; }
+    .hero-content { width: 50%; padding: 2rem 1rem; opacity: 1; transform: none; animation: none; }
+    .hero-content h2 { font-size: 1rem; }
+    .carousel-arrow {display: none;}
+  }
+</style>
+
+<section class="hero-section">
+  <div class="hero-image" id="heroImage"></div>
+  <div class="hero-content" id="heroContent">
+    <h2 id="slideTitle"></h2>
+    <p id="slideText"></p>
+    <button class="btn btn-custom" id="slideButton">Read More</button>
+  </div>
+  <div class="carousel-arrow" id="nextArrow">&#10095;</div>
+</section>
+
+<script>
+const slides = [
+  { image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600', title: 'Luxury Hotel Rooms', text: 'Enjoy our luxurious rooms with a beautiful view of the city.', button: 'Book Now' },
+  { image: '../img/automation/bgn1.jpg', title: 'Relaxing Spa Experience', text: 'Unwind with our professional spa treatments.', button: 'Explore Spa' },
+  { image: '../img/automation/bgn2.jpg', title: 'Gourmet Dining', text: 'Savor exquisite dishes prepared by top chefs.', button: 'View Menu' },
+  { image: '../img/automation/bgn3.jpg', title: 'Swimming Pool & Recreation', text: 'Enjoy our infinity pool and recreational activities.', button: 'Learn More' },
+  { image: '../img/automation/bgn4.jpg', title: 'Event & Conference Halls', text: 'Host your events in our modern conference halls.', button: 'Book Event' },
+];
+
+let currentIndex = 0;
+const heroImage = document.getElementById('heroImage');
+const heroContent = document.getElementById('heroContent');
+const slideTitle = document.getElementById('slideTitle');
+const slideText = document.getElementById('slideText');
+const slideButton = document.getElementById('slideButton');
+const nextArrow = document.getElementById('nextArrow');
+
+function playSlide(index){
+  // Reset image and content
+  heroImage.classList.remove('shrink');
+  heroContent.classList.remove('active');
+
+  // Set new content
+  heroImage.style.backgroundImage = `url('${slides[index].image}')`;
+  slideTitle.textContent = slides[index].title;
+  slideText.textContent = slides[index].text;
+  slideButton.textContent = slides[index].button;
+
+  // Trigger animation after slight delay
+  setTimeout(() => {
+    heroImage.classList.add('shrink'); // image shrink
+    setTimeout(() => heroContent.classList.add('active'), 1000); // text appears after shrink
+  }, 1000); // small timeout to restart animation
+}
+
+function nextSlide(){
+  currentIndex = (currentIndex + 1) % slides.length;
+  playSlide(currentIndex);
+}
+
+// Initial slide
+window.addEventListener('load', () => {
+  playSlide(currentIndex);
+});
+
+// Auto-slide every 7s
+setInterval(nextSlide, 7000);
+
+// Arrow click
+nextArrow.addEventListener('click', nextSlide);
+</script>
