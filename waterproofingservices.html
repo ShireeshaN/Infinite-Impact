@@ -110,10 +110,99 @@
     });
   });
 </script>
-
-
 <!-- Nav Bar End -->
 
+
+
+<div class="otherbans">
+  <img src="img/interiors/waterproofing banner.png" alt="Banner Image">
+  <div class="banner-text">
+    <h2>Waterproofing Services</h2>
+    <!-- <p>We design intelligent lighting and automation solutions for smarter spaces.</p>
+    <button class="banner-btn">Get in Touch</button> -->
+  </div>
+</div>
+
+<style>
+.otherbans {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.otherbans img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  transition: transform 0.6s ease;
+}
+
+.otherbans:hover img {
+  transform: scale(1.05);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  width: 80%;
+}
+
+.banner-text h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.banner-btn {
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .otherbans {
+    height: 50vh;
+  }
+
+  .banner-text h2 {
+    font-size: 26px;
+  }
+
+  .banner-text p {
+    font-size: 14px;
+  }
+
+  .banner-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+</style>
 
 
 <!-- ================== WATERPROOFING SERVICES ================== -->
@@ -131,7 +220,7 @@
     <!-- Service 1 -->
     <div class="row align-items-center service-block mb-5">
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="img/roof-waterproofing.jpg" alt="Roof Waterproofing" class="img-fluid rounded shadow-lg">
+        <img src="img/interiors/Roof Waterproofing.png" alt="Roof Waterproofing" class="img-fluid rounded shadow-lg">
       </div>
       <div class="col-lg-6">
         <h3 class="fw-semibold mb-3" >Roof Waterproofing</h3>
@@ -149,7 +238,7 @@
     <!-- Service 2 (Alternating Layout) -->
     <div class="row align-items-center service-block mb-5 flex-lg-row-reverse">
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="img/basement-waterproofing.jpg" alt="Basement Waterproofing" class="img-fluid rounded shadow-lg">
+        <img src="img/interiors/Basement & Foundation Waterproofing.png" alt="Basement Waterproofing" class="img-fluid rounded shadow-lg">
       </div>
       <div class="col-lg-6">
         <h3 class="fw-semibold mb-3">Basement & Foundation Waterproofing</h3>
@@ -167,7 +256,7 @@
     <!-- Service 3 -->
     <div class="row align-items-center service-block mb-5">
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="img/bathroom-waterproofing.jpg" alt="Bathroom Waterproofing" class="img-fluid rounded shadow-lg">
+        <img src="img/interiors/Bathroom & Terrace Waterproofing.png" alt="Bathroom Waterproofing" class="img-fluid rounded shadow-lg">
       </div>
       <div class="col-lg-6">
         <h3 class="fw-semibold mb-3">Bathroom & Terrace Waterproofing</h3>
@@ -185,7 +274,7 @@
     <!-- Service 4 (Alternating Layout) -->
     <div class="row align-items-center service-block mb-5 flex-lg-row-reverse">
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="img/watertank-waterproofing.jpg" alt="Water Tank Waterproofing" class="img-fluid rounded shadow-lg">
+        <img src="img/interiors/Water Tank Waterproofing.png" alt="Water Tank Waterproofing" class="img-fluid rounded shadow-lg">
       </div>
       <div class="col-lg-6">
         <h3 class="fw-semibold mb-3">Water Tank Waterproofing</h3>
@@ -220,7 +309,8 @@
 }
 .service-block img {
   transition: all 0.5s ease;
-  border: 5px solid #ffffff;
+  border-radius: 0px;
+
 }
 .service-block:hover img {
   transform: scale(1.05);
