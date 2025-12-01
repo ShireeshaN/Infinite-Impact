@@ -66,14 +66,15 @@
             <div class="dropdown-menu">
               <a href="architectural.html" class="dropdown-item">Architectural Design</a>
               <a href="construction.html" class="dropdown-item">Construction & Civil</a>
-              <a href="interior.html" class="dropdown-item">Interior</a>
+           
 
               <!-- Submenu -->
               <div class="dropdown-submenu">
                 <a href="" class="dropdown-item dropdown-toggle">
-                  Interiors & Finishes 
+                  Interior Finishes 
                 </a>
                 <div class="dropdown-menu">
+                     <a href="interior.html" class="dropdown-item">Interior</a>
                   <a href="waterproofingservices.html" class="dropdown-item">Waterproofing</a>
                   <a href="flooringsolutions.html" class="dropdown-item">Flooring Solutions</a>
                   
@@ -209,360 +210,251 @@
 
 
 
-
-<!--
-  ABOUT PAGE SUBSECTIONS for iiapl.com
-  - Drop this block into your existing page between your header and footer
-  - Desktop + Mobile responsive (CSS scoped using .iiapl-about- namespace)
-  - Replace placeholder images (picsum / placeholders) with real product/team images
-  - Author: ChatGPT — ready to convert to React/Tailwind if you want
--->
+<!-- ABOUT PAGE BODY (Updated for Architectural, Civil & Construction Services) -->
 <style>
-  /* Scoped styles to avoid collisions: prefix .iiapl-about- */
-  .iiapl-about-wrapper{max-width:1200px;margin:40px auto;padding:32px;box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#0f172a}
-  .iiapl-about-hero{display:flex;gap:32px;align-items:center}
-  .iiapl-about-hero .left{flex:1}
-  .iiapl-about-hero h1{font-size:36px;margin:0 0 12px;line-height:1.05;color:#07103a}
-  .iiapl-about-hero p.lead{margin:0 0 18px;color:#334155;font-size:16px}
-  .iiapl-about-cta{display:inline-flex;gap:12px;align-items:center}
-  .iiapl-about-btn{background:#111111;color:white;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,0.15)}
-  .iiapl-about-btn.secondary{background:transparent;color:#111111;border:1px solid rgba(0,0,0,0.15)}
-  .iiapl-about-hero .right{flex:1;text-align:right}
-  .iiapl-about-hero .hero-img{width:420px;max-width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+  .about-wrapper{max-width:1200px;margin:40px auto;padding:32px;font-family:Poppins, sans-serif;color:#0f172a}
+  .about-hero{display:flex;gap:32px;align-items:center}
+  .about-hero h1{font-size:38px;font-weight:700;color:#07103a;margin:0 0 12px}
+  .about-hero p{font-size:16px;color:#475569;margin-bottom:18px}
+  .about-hero .right img{width:420px;max-width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
 
-  /* Core info cards */
-  .iiapl-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-  .iiapl-card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
-  .iiapl-card h3{margin:0 0 8px;font-size:18px}
-  .iiapl-card p{margin:0;color:#475569;font-size:14px}
+  .about-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .about-card{background:white;padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+  .about-card h3{margin:0 0 8px;font-size:18px;font-weight:600}
+  .about-card p{margin:0;color:#475569;font-size:14px}
 
-  /* Timeline */
-  .iiapl-timeline{margin-top:40px}
-  .iiapl-timeline h2{font-size:24px;margin-bottom:14px}
-  .iiapl-timeline-list{position:relative;padding-left:20px;border-left:2px solid rgba(15,23,42,0.04)}
-  .iiapl-timeline-item{position:relative;padding:18px 0 18px 26px}
-  .iiapl-timeline-item:before{content:'';position:absolute;left:-11px;top:20px;width:16px;height:16px;border-radius:50%;background:#111111;box-shadow:0 3px 10px rgba(0,0,0,0.25)}
-  .iiapl-timeline-item h4{margin:0 0 6px;font-size:16px}
-  .iiapl-timeline-item p{margin:0;color:#475569;font-size:13px}
+  .services-section{margin-top:40px}
+  .services-section h2{font-size:26px;margin-bottom:14px;font-weight:700;color:#07103a}
+  .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .service-box{background:white;padding:18px;border-radius:12px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+  .service-box h4{margin:0;font-size:17px;font-weight:600}
+  .service-box p{margin:5px 0 0;font-size:14px;color:#475569}
 
-  /* Stats */
-  .iiapl-stats{display:flex;gap:18px;margin-top:28px}
-  .iiapl-stat{flex:1;background:linear-gradient(180deg,#fff 0,#fbfdff 100%);padding:18px;border-radius:10px;text-align:center;box-shadow:0 6px 20px rgba(2,6,23,0.03)}
-  .iiapl-stat .num{font-size:22px;font-weight:700;color:#111111}
-  .iiapl-stat .label{color:#475569;font-size:13px}
+  .faq-section{margin-top:40px}
+  .faq-section h2{font-size:24px;font-weight:700;margin-bottom:14px;color:#07103a}
+  .faq-box details{background:white;padding:14px;border-radius:10px;margin-bottom:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
 
-  /* Team */
-  .iiapl-team{margin-top:40px}
-  .iiapl-team h2{font-size:24px;margin-bottom:14px}
-  .iiapl-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .iiapl-team-card{background:white;border-radius:10px;padding:12px;text-align:center}
-  .iiapl-team-card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
-  .iiapl-team-card h5{margin:10px 0 4px;font-size:15px}
-  .iiapl-team-card p{margin:0;color:#6b7280;font-size:13px}
-
-  /* Services / capabilities */
-  .iiapl-services{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
-  .iiapl-service{display:flex;gap:12px;align-items:flex-start;background:white;padding:12px;border-radius:10px}
-  .iiapl-service svg{flex:0 0 40px}
-  .iiapl-service h4{margin:0 0 6px;font-size:15px}
-  .iiapl-service p{margin:0;color:#475569;font-size:13px}
-
-  /* FAQ / CTA */
-  .iiapl-faq{margin-top:36px}
-  .iiapl-faq h2{font-size:20px}
-  .iiapl-faq-details{background:white;padding:14px;border-radius:10px}
-  .iiapl-cta-strip{margin-top:36px;padding:20px;border-radius:12px;background:linear-gradient(90deg,#111111 0,#3b82f6 100%);color:white;text-align:center}
-
-  /* Responsive */
-  @media (max-width:900px){
-    .iiapl-about-wrapper{padding:20px;margin:20px}
-    .iiapl-about-hero{flex-direction:column;align-items:flex-start}
-    .iiapl-about-hero .right{text-align:left}
-    .iiapl-cards{grid-template-columns:repeat(2,1fr)}
-    .iiapl-team-grid{grid-template-columns:repeat(2,1fr)}
-    .iiapl-services{grid-template-columns:1fr}
-    .iiapl-stats{flex-direction:column}
-  }
-  @media (max-width:480px){
-    .iiapl-about-hero h1{font-size:22px}
-    .iiapl-card{padding:12px}
-    .iiapl-team-card img{height:120px}
+  @media(max-width:900px){
+    .about-hero{flex-direction:column}
+    .about-cards{grid-template-columns:1fr 1fr}
+    .services-grid{grid-template-columns:1fr}
   }
 </style>
 
-<div class="iiapl-about-wrapper">
+<div class="about-wrapper">
 
-  <!-- HERO -->
-  <section class="iiapl-about-hero" aria-labelledby="about-hero-title">
+  <!-- HERO SECTION -->
+  <section class="about-hero">
     <div class="left">
-      <h1 id="about-hero-title">Indian Industrial & Automotive Products Limited — Engineering excellence since day one</h1>
-      <p class="lead">We design and deliver rugged industrial solutions, precision components, and integrated systems for manufacturing, energy, and automotive customers worldwide. Quality, traceability and on-time delivery — that's our promise.</p>
-      <div class="iiapl-about-cta">
-        <a href="#contact" class="iiapl-about-btn">Speak with Sales</a>
-        <a href="#capabilities" class="iiapl-about-btn secondary">See Capabilities</a>
-      </div>
+      <h1>Delivering Excellence in Architectural, Civil & Construction Services</h1>
+      <p>We provide end‑to‑end engineering, civil, architectural, construction, and interior solutions for residential, commercial, and industrial projects. From planning to execution, we ensure quality, durability, and on‑time delivery for both B2B and B2C clients.</p>
     </div>
     <div class="right">
-      <!-- Replace the src with your hero product or factory image -->
-      <img src="https://picsum.photos/800/500?random=10" alt="IIAPL factory and products" class="hero-img">
+      <img src="img/Our Projects.jpg" alt="Construction and Architectural Services">
     </div>
   </section>
 
-  <!-- KEY FACTS / CARDS -->
-  <section class="iiapl-cards" aria-label="Key facts">
-    <article class="iiapl-card">
-      <h3>Global Reach</h3>
-      <p>Delivering to 30+ countries with localized support and logistics partners.</p>
-    </article>
-    <article class="iiapl-card">
-      <h3>ISO & Certifications</h3>
-      <p>Manufacturing to ISO 9001 standards; industry-specific approvals and material traceability.</p>
-    </article>
-    <article class="iiapl-card">
-      <h3>R&D & Customization</h3>
-      <p>End-to-end product design, prototyping, and production scaling for custom projects.</p>
-    </article>
-  </section>
-
-  <!-- TIMELINE -->
-  <section class="iiapl-timeline" id="history">
-    <h2>Our Journey of Excellence</h2>
-    <div class="iiapl-timeline-list">
-      <div class="iiapl-timeline-item">
-        <h4>Commitment to Quality</h4>
-        <p>Every product is built with strict quality control, precision engineering, and unwavering responsibility.</p>
-      </div>
-      <div class="iiapl-timeline-item">
-        <h4>10+ Years of Expertise</h4>
-        <p>With over a decade of hands-on industrial experience, our team delivers trusted and proven solutions.</p>
-      </div>
-      <div class="iiapl-timeline-item">
-        <h4>Reliability You Can Count On</h4>
-        <p>We stand by our work 100% — consistent performance, durability, and customer satisfaction.</p>
-      </div>
-      <div class="iiapl-timeline-item">
-        <h4>Continuous Improvement</h4>
-        <p>We evolve with new technologies, enhanced processes, and a commitment to always deliver better.</p>
-      </div>
+  <!-- KEY CARDS -->
+  <section class="about-cards">
+    <div class="about-card">
+      <h3>Architectural Design</h3>
+      <p>Concept planning, 2D/3D designs, structural drawings & complete building layouts.</p>
+    </div>
+    <div class="about-card">
+      <h3>Civil Structures</h3>
+      <p>Structural consulting, RCC works, approvals, load calculations & execution.</p>
+    </div>
+    <div class="about-card">
+      <h3>Construction Expertise</h3>
+      <p>Apartments, villas, semi‑gated communities & commercial building construction.</p>
     </div>
   </section>
 
-  <section class="iiapl-stats" aria-label="company-stats">
-    <div class="iiapl-stat">
-      <div class="num">5000+ Projects</div>
-      <div class="label">Successfully Delivered</div>
-    </div>
-    <div class="iiapl-stat">
-      <div class="num">High Repeat Rate</div>
-      <div class="label">Clients Trust Our Quality</div>
-    </div>
-    <div class="iiapl-stat">
-      <div class="num">Strong Commitment</div>
-      <div class="label">100% Quality & On‑Time Delivery</div>
+  <!-- SERVICES -->
+  <section class="services-section">
+    <h2>Our Core Services</h2>
+    <div class="services-grid">
+
+      <div class="service-box">
+        <div>
+          <h4>Building Interiors</h4>
+          <p>Full interior execution including modular, premium, and custom solutions.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div>
+          <h4>Waterproofing</h4>
+          <p>Dry basement systems & complete building waterproofing solutions with warranty.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div>
+          <h4>Flooring & Epoxy</h4>
+          <p>Tiles, granite, marble, wooden flooring, industrial epoxy & PU coatings.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div>
+          <h4>Plumbing & Carpentry</h4>
+          <p>End‑to‑end plumbing systems, carpentry works, fittings & maintenance services.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div>
+          <h4>Painting & Finishes</h4>
+          <p>Premium interior/exterior painting, texture work & protective coatings.</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div>
+          <h4>Interior Design</h4>
+          <p>Space planning, theme concepts, 3D renders & turnkey interior execution.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- SERVICES / CAPABILITIES -->
-  <section class="iiapl-services" id="capabilities">
-    <div class="iiapl-service">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L20 6v8c0 5-4 9-8 9s-8-4-8-9V6l8-4z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div>
-        <h4>Precision Manufacturing</h4>
-        <p>CNC turning, milling, stamping and surface treatment with strict tolerances and SPC control.</p>
-      </div>
-    </div>
-    <div class="iiapl-service">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#111111" stroke-width="1.2" stroke-linecap="round"/></svg>
-      <div>
-        <h4>Assembly & Testing</h4>
-        <p>Functional assembly, environmental testing, and automated test benches to ensure reliability.</p>
-      </div>
-    </div>
-    <div class="iiapl-service">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#111111" stroke-width="1.2" stroke-linecap="round"/></svg>
-      <div>
-        <h4>Supply Chain</h4>
-        <p>Vendor-managed inventory, global freight partnerships and export compliance expertise.</p>
-      </div>
-    </div>
-    <div class="iiapl-service">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#111111" stroke-width="1.2" stroke-linecap="round"/></svg>
-      <div>
-        <h4>Custom Engineering</h4>
-        <p>From concept to mass production — DFMEA, prototyping, and validation support.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- BRAND PARTNERS -->
+            <!-- FAQs Start -->
+            <div class="faqs">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p>Frequently Asked Question</p>
+                        <h2>You May Ask</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="accordion-1">
+                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                           What waterproofing services do you offer?
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                           We provide terrace, roof, and bathroom waterproofing using high-quality materials.    </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
+                                           Do you handle commercial projects?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                          Yes, we work with builders, contractors, and industries on all scales.   </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
+                                            What’s special about your epoxy flooring?
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                          Our epoxy floors are durable, chemical-resistant, and easy to maintain.  </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.4s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
+                                            Do you take complete civil construction work?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                          Yes, we manage projects from foundation to finishing.  </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.5s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
+                                           What kind of paints do you use?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                         We use premium-grade paints that ensure lasting color and finish.       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="accordion-2">
+                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
+                                          Can you do customized tile work?
+                                        </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                      Yes, we install all types of tiles with perfect alignment and finish.        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.2s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
+                                         Do you provide plumbing services for new buildings?
+                                        </a>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                    Yes, we handle all plumbing installations and repairs.         </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
+                                         How do you ensure project quality?
+                                        </a>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                           Our expert team follows strict quality checks at every stage.   </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.4s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
+                                           How long do your waterproofing solutions last?
+                                        </a>
+                                    </div>
+                                    <div id="collapseNine" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                           Depending on the area and product, 8–12 years on average.    </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.5s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen">
+                                           How can I get a quote?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTen" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+                                           Just contact us — we’ll schedule a quick site visit and share a quote.   </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQs End -->
 
-
-
- 
-<!-- <style>
-
-.partners-section {
-  margin-top: 40px;
-}
-
-.partners-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #111;
-}
-
-
-.partners-slider {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
-
-.partners-track {
-  display: flex;
-  gap: 20px;
-  animation: scroll-left 18s linear infinite;
-}
-
-
-.partner-card {
-  min-width: 230px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.partner-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.partner-card h5 {
-  margin: 10px 0 4px;
-  font-size: 15px;
-  color: #111;
-}
-
-.partner-card p {
-  margin: 0;
-  font-size: 13px;
-  color: #6b7280;
-}
-
-
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-
-@media(max-width:768px){
-  .partner-card { min-width: 180px; }
-  .partner-card img { height: 120px; }
-}
-</style>
-
-
-
-<section class="partners-section" id="partners">
-  <h2>Our Brand Partnerships</h2>
-
-  <div class="partners-slider">
-    <div class="partners-track">
-
-      
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=21" alt="">
-        <h5>Partner One</h5>
-        <p>Industrial Solutions</p>
-      </div>
-
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=22" alt="">
-        <h5>Partner Two</h5>
-        <p>Automotive Leader</p>
-      </div>
-
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=23" alt="">
-        <h5>Partner Three</h5>
-        <p>Electrical Components</p>
-      </div>
-
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=24" alt="">
-        <h5>Partner Four</h5>
-        <p>Manufacturing Group</p>
-      </div>
-
-    
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=21" alt="">
-        <h5>Partner One</h5>
-        <p>Industrial Solutions</p>
-      </div>
-
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=22" alt="">
-        <h5>Partner Two</h5>
-        <p>Automotive Leader</p>
-      </div>
-
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=23" alt="">
-        <h5>Partner Three</h5>
-        <p>Electrical Components</p>
-      </div>
-
-      <div class="partner-card">
-        <img src="https://picsum.photos/400/300?random=24" alt="">
-        <h5>Partner Four</h5>
-        <p>Manufacturing Group</p>
-      </div>
-
-    </div>
-  </div>
-</section> -->
-
-  <!-- partners end -->
-
-  <!-- FAQ -->
-  <section class="iiapl-faq" id="faq">
-    <h2>Frequently asked</h2>
-    <div class="iiapl-faq-details">
-      <details open>
-        <summary>Do you accept custom orders and small batches?</summary>
-        <p style="margin-top:8px">Yes. We accept both prototype and small series orders — lead times depend on volume and specifications.</p>
-      </details>
-      <details>
-        <summary>What certifications do you hold?</summary>
-        <p style="margin-top:8px">Our primary quality certification is ISO 9001; we also hold industry-specific approvals for certain product lines (listed on our certifications page).</p>
-      </details>
-      <details>
-        <summary>Do you provide technical drawings and documentation?</summary>
-        <p style="margin-top:8px">We provide full manufacturing drawings, material certificates and test reports with every order as required.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- CTA STRIP -->
-  <section class="iiapl-cta-strip" id="contact">
-    <h3 style="margin:0 0 6px">Ready to discuss your project?</h3>
-    <p style="margin:0 0 12px;opacity:0.95">Contact our sales team for a custom quote, samples, or a plant tour.</p>
-    <a href="contact.html" class="iiapl-about-btn">Contact Us</a>
-  </section>
 
 </div>
-<!-- END ABOUT -->
-
+<!-- END UPDATED ABOUT PAGE BODY -->
 
 
        
