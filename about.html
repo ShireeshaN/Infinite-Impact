@@ -321,6 +321,76 @@
   </section>
 
 
+        <!-- brand start -->
+<div class="brandpartnersss">
+    <div class="partner-box">
+        <h2>Our Brand Partner</h2>
+
+        <!-- Brand Logo -->
+        <img src="img/images.png" alt="Brand Logo" class="partner-logo">
+
+        <!-- Partner Code -->
+       
+    </div>
+</div>
+
+<style>
+/* ----- GRID SYSTEM LIKE BOOTSTRAP ----- */
+.brandpartnersss {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 columns */
+    gap: 20px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* Card spans full width on mobile (12/12) */
+.partner-box {
+    grid-column: span 12;
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    margin: auto;
+    max-width: 380px;
+}
+
+/* Desktop: card fits in middle (like 4 columns center) */
+@media(min-width: 992px) {
+    .partner-box {
+        grid-column: 5 / span 4; /* columns 5-8 → center perfectly */
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/* Logo */
+.partner-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Partner Code */
+.partner-code {
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+</style>
+<!-- brand end -->
+
+
+           
+            
+
             <!-- FAQs Start -->
             <div class="faqs">
                 <div class="container">
@@ -453,6 +523,7 @@
             <!-- FAQs End -->
 
 
+
 </div>
 <!-- END UPDATED ABOUT PAGE BODY -->
 
@@ -484,12 +555,16 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Our Services</h2>
-                    <a href="#">Waterproofing</a>
-                    <a href="#">Painting</a>
-                    <a href="#">Tiles Work</a>
-                    <a href="#">Epoxy Flooring</a>
-                    <a href="#">Plumbing</a>
-                    <a href="#">Carpentry</a>
+                    <a href="architectural.html">Architectural Design</a>
+                    <a href="construction.html">Construction & Civil</a>
+                    <a href="interior.html">Interior</a>
+                    <a href="waterproofingservices.html">Waterproofing</a>
+                    <a href="flooringsolutions.html">Flooring Solutions</a>
+                    <a href="painting.html">Painting</a>
+                     <a href="tiles.html">Tiles Work</a>
+                    <a href="plumbing.html">Plumbing</a>
+                    <a href="carpentry.html">Carpentry</a>
+                 
                 </div>
             </div>
 
@@ -497,11 +572,11 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>Useful Links</h2>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">FAQs</a>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="project.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                  
                 </div>
             </div>
 
